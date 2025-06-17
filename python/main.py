@@ -3,6 +3,7 @@
 """
 This is a block comment
 """
+from sympy.concrete.guess import guess
 from sympy.solvers.diophantine.diophantine import length
 
 # print('I like pizza!')
@@ -468,31 +469,478 @@ While loops
 Compound Interest calculator 
 """
 
-principle = 0
-rate = 0
-time = 0
+# principle = 0
+# rate = 0
+# time = 0
+#
+# while True:
+#     principle = float(input('Enter the principle amount: '))
+#     if principle < 0:
+#         print('Cant be less than zero')
+#     else:
+#         break
+#
+# while True:
+#     rate = float(input('Enter the rate amount: '))
+#     if rate < 0:
+#         print('Cant be less than zero')
+#     else:
+#         break
+#
+# while True:
+#     time = int(input('Enter the time in years : '))
+#     if time < 0:
+#         print('Cant be less than zero')
+#     else:
+#         break
+# print(principle, rate, time)
+#
+# total = principle * pow((1 + rate / 100), time)
+# print(f'Balance after {time} years is: ${total:.2f}')
 
-while True:
-    principle = float(input('Enter the principle amount: '))
-    if principle < 0:
-        print('Cant be less than zero')
-    else:
-        break
+"""
+For loops
+execute a block of code a fixed number of times.
+"""
 
-while True:
-    rate = float(input('Enter the rate amount: '))
-    if rate < 0:
-        print('Cant be less than zero')
-    else:
-        break
+# credit_num = "1234-2425-2334-9953"
+#
+# for i in credit_num:
+#     print(i)
 
-while True:
-    time = int(input('Enter the time in years : '))
-    if time < 0:
-        print('Cant be less than zero')
-    else:
-        break
-print(principle, rate, time)
+# for i in range(1,21):
+#     if i == 13:
+#         continue
+#     else:
+#         print(i)
+#
+#
+# for i in range(1,21):
+#     if i == 13:
+#         break
+#     else:
+#         print(i)
 
-total = principle * pow((1 + rate / 100), time)
-print(f'Balance after {time} years is: ${total:.2f}')
+
+"""
+Count down timer program
+"""
+
+# import time
+#
+# my_time = int(input("Enter the time in seconds: "))
+#
+# for i in range(my_time, 0, -1):
+#     seconds = i % 60
+#     minutes = i // 60
+#     hours = i // 3600
+#     print(f'{hours:02}:{minutes:02}:{seconds:02}')
+#     time.sleep(1)
+#
+# print("Times Up")
+
+
+"""
+Nested loops 
+A loop withing another loop (outer, inner)
+"""
+
+# rows = int(input("Enter the # of rows: "))
+# columns = int(input("Enter the # of columns: "))
+# symbol = input("Enter the symbol: ")
+#
+#
+# for j in range(rows):
+#     for i in range(columns):
+#         print(symbol, end='')
+#     print()
+
+"""
+Collection
+single 'variable' used to store multiple values
+list = [] ordered and changeable
+set = {} unordered and immutable
+Tuple = () ordered and unchanged
+"""
+
+# fruits = ['apple', 'banana', 'orange', 'pear']
+fruits = {'apple', 'banana', 'orange', 'pear'}
+
+# print(dir(fruits))
+# print(len(fruits))
+# print('banana' in fruits)
+# print('apple' in fruits)
+
+# fruits[0] = 'kiwi'
+# fruits.append('kiwi')
+# fruits.remove('apple')
+# fruits.insert(0, 'berry')
+# fruits.sort()
+# fruits.reverse()
+# fruits.clear()
+# print(fruits.index('pear'))
+# print(fruits.count('apple'))
+
+# print(fruits)
+# print(fruit[::2])
+# for fruit in fruits:
+#     print(fruit)
+
+"""
+Shoping cart program
+"""
+
+# foods = []
+# prices = []
+# total = 0
+#
+# while True:
+#     food = input('Enter food (q to quit): ')
+#     if food.lower() == "q":
+#         break
+#     else:
+#         price = float(input(f'Enter price of a {food}: $'))
+#         foods.append(food)
+#         prices.append(price)
+# print(5*'-', 'YOUR CART', 5 *'-')
+#
+# for food in foods:
+#     print(food, end = " ")
+#
+# for price in prices:
+#     total += price
+# print(f'\nFinal total: ${total}')
+
+"""
+2D list/ matrix
+"""
+
+
+# fruits =     ['apple', 'banana', 'orange', 'pear']
+# vegetables = ['tomato', 'celery', 'onion']
+# meats =      ['steak', 'chicken', 'pork']
+#
+# groceries = [fruits, vegetables, meats]
+#
+# # fruits[0] = 'kiwi'
+# # print(fruits)
+# # print(groceries[2][1])
+#
+# for collection in groceries:
+#     for food in collection:
+#         print(food, end = ' ')
+#     print()
+
+# num_pad = ((1,2,3),
+#            (4,5,6),
+#            (7,8,9),
+#            ('*',0,'#'))
+#
+# for row in num_pad:
+#     for num in row:
+#         print(num, end= ' ')
+#     print()
+
+
+"""
+Python quiz game
+"""
+
+# questions = ('What is the capital of France?: ',
+#             'Who wrote the play Romeo and Juliet?: ',
+#             'What is the largest planet in our solar system?: ',
+#             'In what year did the Titanic sink?: ',
+#             'What element does "O" represent on the periodic table?: ')
+#
+# options = (
+#     ('A. Paris', 'B. London', 'C. Berlin', 'D. Madrid'),
+#     ('A. William Shakespeare', 'B. Charles Dickens', 'C. J.K. Rowling', 'D. Jane Austen'),
+#     ('A. Earth', 'B. Jupiter', 'C. Saturn', 'D. Mars'),
+#     ('A. 1912', 'B. 1905', 'C. 1923', 'D. 1898'),
+#     ('A. Oxygen', 'B. Hydrogen', 'C. Nitrogen', 'D. Carbon'))
+#
+# answers = ('A','A','B','A','A')
+# guesses = []
+# score = 0
+# question_number = 0
+#
+# for question in questions:
+#     print(50*'-')
+#     print(question)
+#     for option in options[question_number]:
+#         print(option)
+#
+#     guess = input("Enter (A,B,C,D): ").upper()
+#     guesses.append(guess)
+#     if guess == answers[question_number]:
+#         score += 1
+#         print('Correct!')
+#     else:
+#         print('Incorrect!')
+#         print(f'{answers[question_number]} was correct.')
+#     question_number += 1
+#
+# print('answers:', end ='')
+# for answer in answers:
+#     print(answer, end =' ')
+# print()
+#
+# print('guesses', end ='')
+# for guess in guesses:
+#     print(guess, end =' ')
+# print()
+#
+# score = int(score / len(questions) * 100)
+# print(f'score: {score}%')
+
+"""
+dictionary
+Collection of {key:value} pairs (so java hashmap)
+order anc changeable no dups
+"""
+
+capitals = {'USA': 'Washingtong D.C',
+            'India': 'New Delhi',
+            'China': 'Beijing',
+            'Russia': 'Moscow'}
+
+# print(capitals.get('USA'))
+# print(capitals.get('Japan'))
+#
+# if capitals.get('japan'):
+#     print('that capital exist')
+# else:
+#     print('that capital doesn\'t exist')
+# # capitals.update({'Germany': 'Berlin'})
+# capitals.pop('China')
+# capitals.popitem()
+# capitals.clear()
+
+# keys = capitals.keys()
+#
+# print(capitals)
+# print(keys)
+#
+# for key in capitals.keys():
+#     print(key)
+
+# values = capitals.values()
+# print(values)
+#
+# for value in capitals.values():
+#     print(value)
+
+# items = capitals.items()
+# # print(items)
+#
+# for key, value in capitals.items():
+#     print(f'{key}: {value:}')
+
+"""
+Concession stand program
+"""
+
+# menu = {
+#     "Pizza Margherita": 8.99,
+#     "Burger and Fries": 6.50,
+#     "Spaghetti Carbonara": 10.00,
+#     "Caesar Salad": 7.25,
+#     "Grilled Chicken Sandwich": 7.75,
+#     "Fish and Chips": 9.50,
+#     "Vegetable Stir Fry": 8.00,
+#     "Chocolate Cake": 4.50
+# }
+#
+# cart = []
+# total = 0
+# print('------ MENU ------')
+# for key, value in menu.items():
+#     print(f'{key:25}: ${value:.2f}')
+# print(50*'-')
+#
+# while True:
+#     food = input('Select an item (q to quit): ')
+#     if food == 'q' or food == 'Q':
+#         break
+#     elif menu.get(food)is not None:
+#         cart.append(food)
+# # print(cart)
+#
+# for food in cart:
+#     total += menu.get(food)
+#     print(food, end = ' ')
+#
+# print()
+# print(f'Total is ${total:.2f}', end = ' ')
+
+"""
+Random guess number
+"""
+import random
+# low = 1
+# high = 100
+# options = ('rock', 'paper', 'scissor')
+# cards = ['2','3','4','5','6','7','8','9']
+
+
+# number = random.randint(low,high)
+# number = random.random()
+# option = random.choice(options)
+# random.shuffle(cards)
+
+# print(cards)
+# print(options)
+# print(number)
+
+# lowest_num = 1
+# highest_num = 100
+# guesses = 0
+# is_running =  True
+#
+# ans = random.randint(lowest_num, highest_num)
+#
+# print('Number guessing game')
+# print(f"Select a number between {lowest_num} and {highest_num}")
+#
+# while is_running:
+#     guess = input("Enter Your Guess: ")
+#
+#     if guess.isdigit():
+#         guess = int(guess)
+#         guesses+= 1
+#
+#         if guess < lowest_num or guess > highest_num:
+#             print("That number is out of range")
+#             print(f"Select a number between {lowest_num} and {highest_num}")
+#         elif guess < ans:
+#             print('Too low')
+#         elif guess > ans:
+#             print('Too high')
+#         else:
+#             print(f'Congratulations, the answer was {ans}')
+#             print(f'Your guesses was {guesses}')
+#             is_running = False
+#     else:
+#         print('invalid guess, try again')
+#         print(f"Select a number between {lowest_num} and {highest_num}")
+
+
+"""
+Rock Paper Scissors game
+"""
+
+# import random
+#
+# options = ('rock', 'paper', 'scissors')
+#
+# running = True
+#
+# while running:
+#
+#     player = None
+#     computer = random.choice(options)
+#
+#     while player not in options:
+#         player = input('Enter a choice (Rock(R), Paper(P), Scissors(S)): ')
+#     if player == computer:
+#         print('Draw')
+#     elif player == 'rock' and computer == 'scissors':
+#         print('You win!')
+#     elif player == 'scissors' and computer == 'paper':
+#         print('You Win!')
+#     elif player == 'paper' and computer == 'rock':
+#         print('You Win!')
+#     else:
+#         print('You Lose!')
+#     if not input('play again? (y/n): ').lower().startswith('y'):
+#         running = False
+#
+# print(f'player: {player}')
+# print(f'computer: {computer}')
+
+# import random
+#
+# dice_art = {
+#     1: '⚀',
+#     2: '⚁',
+#     3: '⚂',
+#     4: '⚃',
+#     5: '⚄',
+#     6: '⚅',
+# }
+#
+# dice = []
+# total = 0
+# num_of_dice = int(input('How many dices?: '))
+#
+# for die in range(num_of_dice):
+#     dice.append(random.randint(1, 6))
+#
+# for die in range(num_of_dice):
+#     for line in dice_art.get(dice[die]):
+#         print(line)
+#
+# for die in dice:
+#     total += die
+# print(f'The total is: {total}')
+
+
+"""
+functions
+A block of resuable code palce () after the function name to invoke it
+"""
+
+# def happy_birthday(name, age):
+#     print('Happy Birthday to', name)
+#     print(f'You are {age} old!')
+#     print('Happy Birthday to', name)
+#     print()
+#
+# happy_birthday('andy', 20)
+# happy_birthday('Russia', 20)
+# happy_birthday('Joe', 32)
+#
+# def display_invoice(username, amount, due_date):
+#     print('Your invoice is', amount)
+#     print(f'Your bill of ${amount:.2f} is due {due_date}.')
+#
+# display_invoice('Andussy', 40.03, '04/02')
+
+"""
+Return
+statement used to end a function
+and send a result back to the caller
+"""
+
+# z = 0
+#
+# def add(x,y):
+#     z = x + y
+#     return z
+#
+#
+# def sub(x,y):
+#     z = x + y
+#     return z
+#
+# def multiply(x,y):
+#     z = x * y
+#     return z
+#
+# def divide(x,y):
+#     z = x / y
+#     return z
+#
+# print(add(1,2))
+# print(multiply(1,2))
+# print(divide(1,2))
+# print(sub(2,2))
+#
+# def create_name(first, last):
+#     first = first.capitalize()
+#     last = last.capitalize()
+#     return f'{first} {last}'
+#
+# full_name = create_name('Andy', 'whang')
+#
+# print(full_name)
