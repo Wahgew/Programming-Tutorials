@@ -3,6 +3,8 @@
 """
 This is a block comment
 """
+import time
+
 from sympy.concrete.guess import guess
 from sympy.solvers.diophantine.diophantine import length
 
@@ -944,3 +946,91 @@ and send a result back to the caller
 # full_name = create_name('Andy', 'whang')
 #
 # print(full_name)
+
+"""
+default arguments
+A default valuie for certain params
+deafult is used when arg is omitted
+make fucntions more flexiable, reduces # of args
+"""
+
+# def net_price(list_price, discount=0, tax=0.10):
+#     return list_price * (1 - discount) * (1 + tax)
+#
+# # print(net_price(500))
+# print(net_price(500, 0.1))
+# print(net_price(500, 0.1, 0))
+#
+# def count(end, start=0):
+#     for i in range(start, end+1):
+#         print(i)
+#         time.sleep(1)
+#     print("DONE!")
+# count(30, 20)
+
+"""
+keyword arguments
+and arg preceded by identifier
+order of arguments dont matter
+"""
+
+# def hello(greeting, title, first, last):
+#     print(f'{greeting} {title} {first} {last}')
+
+# print(hello("hello", first='Andy', title='Dr.', last='Whang'))
+# hello('hello', 'Mr', last='john', first='Jerry')
+
+# for i in range(1,11):
+#     print(i, end = ' ') # end is the keword
+
+# print('1','2','3', sep = ' ')
+
+# def get_phone(country, area, first, last):
+#     return f'{country}-{area}-{first}-{last}'
+#
+# phone_number = get_phone(country=1, area=206, first=276, last=4242)
+#
+# print(phone_number)
+
+"""
+*args = allows you to pass multiple non-key arguments
+**kwargs = allows you to pass multipule keyword-arguments
+* unpacking operator
+"""
+
+# def add(*args):
+#     total = 0
+#     for arg in args:
+#         total+= arg
+#     return total
+#
+# print(add(1,2,3,7,6,6,4))
+
+# def display_name(*args):
+#     for arg in args:
+#         print(arg, end= ' ')
+#
+# display_name("Andy",'Gerald', 'Wang')
+
+# def print_address(**kwargs):
+#     for keys, value in kwargs.items():
+#         print(f'{keys}: {value}')
+#
+# print_address(street='123 north ST',city='Atlanta', state='Georgia', apt ='304')
+
+# def shipping_label(*args, **kwargs):
+#     for arg in args:
+#         print(arg, end =' ')
+#     print()
+#
+#     if 'apt' in kwargs:
+#         print(f'{kwargs.get('street')} {kwargs.get('apt')}')
+#         print(f'{kwargs.get('city')} {kwargs.get('state')}')
+#     elif 'pobox' in kwargs:
+#         print(f'{kwargs.get('street')}')
+#         print(f'{kwargs.get('pobox')}')
+#
+#     else:
+#         print(kwargs.get('street'))
+#
+# shipping_label("Andy",'Gerald', 'Wang', street ='2837 Cum zone St.', pobox = 'PO. BOX #322', state='oregon', city = 'portland')
