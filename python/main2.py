@@ -128,17 +128,17 @@ much more clear syntax
 #
 # print(weekend('Monday'))
 
-def weekend(day):
-    match day:
-        case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
-            return 'False'
-        case "Saturday" | "Sunday":
-            return 'True'
-        case _:
-            return 'False'
+# def weekend(day):
+#     match day:
+#         case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
+#             return 'False'
+#         case "Saturday" | "Sunday":
+#             return 'True'
+#         case _:
+#             return 'False'
 
-print(weekend('Sunday'))
-print(weekend('Monday'))
+# print(weekend('Sunday'))
+# print(weekend('Monday'))
 
 """
 module
@@ -220,9 +220,107 @@ library = import library for functionality
 when running libary direcrly display a help page
 """
 
-def main():
-    # code goes here
-    x = 2
+# def main():
+#     # code goes here
+#     x = 2
+#
+# if __name__ == "__main__":
+#     main()
 
-if __name__ == "__main__":
-    main()
+
+# s =  '[[[]]]'
+#
+# pairs = ['()', '[]', '{}']
+# max_pairs = (len(s) / 2) -1
+#
+# pair = ''
+#
+# if pair in pairs:
+#     print(True)
+#
+# for index in range(len(s)):
+#     pair = s[index] + s[(len(s) - 1) - index]
+#     if index == max_pairs: break
+#     if pair not in pairs:
+#         print(f'{pair} not in {pairs}')
+#     pair = ''
+#
+#
+#     class Solution:
+#         def isValid(self, s: str) -> bool:
+#             pairs = ['()', '[]', '{}']
+#             max_pairs = (len(s) // 2) - 1
+#             pair = ''
+#
+#             if (len(s) % 2 != 0):
+#                 return False
+#
+#             for index in range(len(s)):
+#                 pair = s[index] + s[(len(s) - 1) - index]
+#                 if index == max_pairs: break
+#                 if pair not in pairs:
+#                     return False
+#                 pair = ''
+#             return True
+
+# s = '[[[]]]'
+# s = '()[]{}'
+# s = '(]'
+# s = '()()()()[[]]'
+# s = '[()()[)[}[]()]'
+# s = ''
+# def isValid(s: str) -> bool:
+#     if (len(s) % 2 != 0):
+#         return False
+#
+#     # count total opening and closing
+#     parentheses = 0
+#     square_bracket = 0
+#     curly_braces = 0
+#     #
+#     # for index in s:
+#     #     if index == '(' or ')':
+#     #         parentheses += 1
+#     #     elif index == '[' or ']':
+#     #         square_bracket += 1
+#     #     elif index == '{' or '}':
+#     #         curly_braces += 1
+#
+#     for index in s:
+#         match index:
+#             case '(' | ')':
+#                 parentheses += 1
+#             case '[' | ']':
+#                 square_bracket += 1
+#             case '{' | '}':
+#                 curly_braces += 1
+#
+#     if parentheses % 2 != 0:
+#         return False
+#
+#     if square_bracket % 2 != 0:
+#         return False
+#
+#     if curly_braces % 2 != 0:
+#         return False
+#
+#     return True
+#
+# print(isValid(s))
+
+# string = "apple     banana     cherry"
+# # string = "kiwi"
+# string = 'Hello World'
+# string = "   fly me   to   the moon  "
+# array = string.split(" ")
+#
+# i = 0
+# while i < len(array):
+#     if array[i] == "":  # Check if the element is an empty string
+#         array.pop(i)  # Remove the element at index i
+#     else:
+#         i += 1  # Only increment i if no element was removed
+# print(array) # Output: ['apple', 'banana', 'cherry']
+#
+# print(len(array[len(array)-1]))
+
